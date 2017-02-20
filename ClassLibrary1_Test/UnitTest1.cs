@@ -7,8 +7,11 @@ namespace ClassLibrary1_Test
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Test_XMLReader_ReadsFromAnElement_WhenGivenAnElementToRead()
         {
+            //Arrange
+            //Act
+            //Assert
         }
     }
 }
