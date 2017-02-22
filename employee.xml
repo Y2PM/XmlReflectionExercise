@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<employee xmlns="urn:empl-hire">
+  <ID>0</ID>
+  <hire-date>1900-01-01</hire-date>
+  <title>title1</title>
+</employee>

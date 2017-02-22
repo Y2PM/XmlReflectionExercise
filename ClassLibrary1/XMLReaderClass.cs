@@ -18,7 +18,6 @@ namespace ClassLibrary1
             {
                 while (reader.Read())
                 {
-
                     if (reader.LocalName == element)
                     {
                         strlist.Add(reader.ReadString());
