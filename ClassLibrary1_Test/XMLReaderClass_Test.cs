@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ClassLibrary1;
+using System.Collections.Generic;
 
 namespace ClassLibrary1_Test
 {
@@ -8,15 +9,15 @@ namespace ClassLibrary1_Test
     public class XMLReaderClass_Test
     {
         [TestMethod]
-        public void Test_XMLReader_ReadsFromAnElement_WhenToldAnElementToRead()
+        public void Test_Read_ReadsFromXmlFile_WhenGivenAFileName()
         {
             //Arrange
             XMLReaderClass XObject = new XMLReaderClass();
-            string elementString;
+            List<string> strlist = new List<string> { };
             //Act
-            elementString = XObject.Read("Element1");
+            strlist = XObject.Read("C:\\Users\\joseph.bannert\\Desktop\\XmlReflectionExercise\\employee.xml");
             //Assert
-            Assert.IsNotNull(elementString);
+            Assert.IsNotNull(strlist[0]);
         }
     }
 }
