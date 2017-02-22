@@ -10,7 +10,6 @@ namespace XmlReflectionExercise.Project
     {
         static void Main(string[] args)
         {
-            //A change
         }
     }
 }
