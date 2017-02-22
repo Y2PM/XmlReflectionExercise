@@ -14,7 +14,7 @@ namespace XmlReflectionExercise.Project
             //Arrange
             XMLReaderClass XObject = new XMLReaderClass();
             //Act
-            var xmlcont = XObject.Read("C:\\Users\\joseph.bannert\\Desktop\\XmlReflectionExercise\\employee.xml");
+            var xmlcont = XObject.Read("C:\\Users\\joseph.bannert\\Desktop\\XmlReflectionExercise\\employee.xml", "hire-date");
             foreach (var item in xmlcont)
             {
                 Console.WriteLine(item.ToString());
