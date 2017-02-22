@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ClassLibrary1;
 
 namespace ClassLibrary1_Test
 {
@@ -10,12 +11,12 @@ namespace ClassLibrary1_Test
         public void Test_XMLReader_ReadsFromAnElement_WhenToldAnElementToRead()
         {
             //Arrange
-            XMLReaderclass XObject = new XMLReaderclass();
-            string elementString = new string();
+            XMLReaderClass XObject = new XMLReaderClass();
+            string elementString = "";
             //Act
             elementString = XObject.Read("Element1");
             //Assert
-            Assert.IsNotNull(string elementString);
+            Assert.IsNotNull(elementString);
         }
     }
 }

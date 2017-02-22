@@ -8,6 +8,11 @@ namespace ClassLibrary1
 {
     public class XMLReaderClass
     {
+        public string Read(string InputString)
+        {
+            string OutputString = "";
 
+            return OutputString;
+        }
     }
 }
