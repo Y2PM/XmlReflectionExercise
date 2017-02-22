@@ -12,7 +12,7 @@ namespace ClassLibrary1_Test
         {
             //Arrange
             XMLReaderClass XObject = new XMLReaderClass();
-            string elementString = "";
+            string elementString;
             //Act
             elementString = XObject.Read("Element1");
             //Assert

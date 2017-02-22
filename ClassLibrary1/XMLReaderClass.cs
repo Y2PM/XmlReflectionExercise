@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace ClassLibrary1
 {
@@ -10,7 +11,9 @@ namespace ClassLibrary1
     {
         public string Read(string InputString)
         {
-            string OutputString = "";
+
+            XmlTextReader reader = new XmlTextReader(InputString);
+            string OutputString = reader.ReadElementString();
 
             return OutputString;
         }
