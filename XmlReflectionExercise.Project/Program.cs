@@ -36,8 +36,8 @@ namespace XmlReflectionExercise.Project
             //Write to a text file:
             string[] text = { "Ipv6: " + Dns.GetHostEntry(Dns.GetHostName()).AddressList[0].ToString(), "Ipv4: " + Dns.GetHostEntry(Dns.GetHostName()).AddressList[1].ToString() };
 
-            string mydocpath =
-                Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            //string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string mydocpath = Directory.GetCurrentDirectory();
 
             using (StreamWriter outputFile = new StreamWriter(mydocpath + @"\Ipv_4&6.txt"))
             {

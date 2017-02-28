@@ -17,7 +17,24 @@ namespace ClassLibrary1
 
             foreach (ManagementObject item in ManagementObjectCollectionObject)
             {
+                if ((bool)item["IPEnabled"])
+                {
+                    try
+                    {
+                        ManagementBaseObject setIP;
+                        ManagementBaseObject newIP =
+                            item.GetMethodParameters("EnableStatic");
 
+                        newIP["IPAddress"] = new string[] { NewIpAddress };
+                        //newIP["SubnetMask"] = new string[] { subnet_mask };
+
+                        setIP = item.InvokeMethod("EnableStatic", newIP, null);
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                }
             }
 
         }
