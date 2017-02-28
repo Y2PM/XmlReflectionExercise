@@ -36,11 +36,11 @@ namespace ClassLibrary1_Test
         {
             //Arrange
             IpConfigChangerClass IpConfigChangerObject = new IpConfigChangerClass();
-            List<string> Ipv4string = null;
+            List<string> Ipv6string = null;
             //Act
-            Ipv4string = IpConfigChangerObject.getIp();
+            Ipv6string = IpConfigChangerObject.getIp();
             //Assert
-            Assert.AreEqual("10.7.9.165", Ipv4string[1]);
+            Assert.AreEqual("fe80::94e:d392:c843:25ed%12", Ipv6string[1]);
         }
 
     }

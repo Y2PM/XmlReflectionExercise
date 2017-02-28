@@ -33,9 +33,8 @@ namespace XmlReflectionExercise.Project
             Console.ReadLine();
             */
 
-
             //Write to a text file:
-            string[] text = { Dns.GetHostEntry(Dns.GetHostName()).AddressList[0].ToString(), Dns.GetHostEntry(Dns.GetHostName()).AddressList[1].ToString() };
+            string[] text = { "Ipv6: " + Dns.GetHostEntry(Dns.GetHostName()).AddressList[0].ToString(), "Ipv4: " + Dns.GetHostEntry(Dns.GetHostName()).AddressList[1].ToString() };
 
             string mydocpath =
                 Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
