@@ -33,6 +33,7 @@ namespace XmlReflectionExercise.Project
             Console.ReadLine();
             */
 
+            /*
             //Write to a text file:
             string[] text = { "Ipv6: " + Dns.GetHostEntry(Dns.GetHostName()).AddressList[0].ToString(), "Ipv4: " + Dns.GetHostEntry(Dns.GetHostName()).AddressList[1].ToString() };
 
@@ -44,6 +45,8 @@ namespace XmlReflectionExercise.Project
                 foreach (string line in text)
                     outputFile.WriteLine(line);
             }
+            */
+
         }
     }
 }
