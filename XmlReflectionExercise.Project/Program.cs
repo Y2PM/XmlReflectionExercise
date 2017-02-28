@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +12,7 @@ namespace XmlReflectionExercise.Project
     {
         static void Main(string[] args)
         {
+            /*
             //Arrange
             XMLReaderClass XObject = new XMLReaderClass();
             //Act
@@ -20,6 +22,13 @@ namespace XmlReflectionExercise.Project
                 Console.WriteLine(item.ToString());
             }
             Console.ReadLine();
+            */
+            foreach (var item in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
+            {
+                Console.WriteLine(item.ToString());
+            }
+            Console.ReadLine();
+
         }
     }
 }

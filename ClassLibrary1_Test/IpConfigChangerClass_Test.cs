@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ClassLibrary1;
 
 namespace ClassLibrary1_Test
 {
@@ -11,6 +12,17 @@ namespace ClassLibrary1_Test
         {
             //Arrange
 
+            //Act
+
+            //Assert
+
+        }
+
+        [TestMethod]
+        public void Test_getIPMethod_GetsIpAddress_WhenEnvoked()
+        {
+            //Arrange
+            IpConfigChangerClass IpConfigChangerObject = new IpConfigChangerClass();
             //Act
 
             //Assert
