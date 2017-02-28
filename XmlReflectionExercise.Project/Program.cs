@@ -1,6 +1,7 @@
 ﻿using ClassLibrary1;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -23,12 +24,27 @@ namespace XmlReflectionExercise.Project
             }
             Console.ReadLine();
             */
+
+            /*
             foreach (var item in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
             {
                 Console.WriteLine(item.ToString());
             }
             Console.ReadLine();
+            */
 
+
+            //Write to a text file:
+            string[] text = { Dns.GetHostEntry(Dns.GetHostName()).AddressList[0].ToString(), Dns.GetHostEntry(Dns.GetHostName()).AddressList[1].ToString() };
+
+            string mydocpath =
+                Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            using (StreamWriter outputFile = new StreamWriter(mydocpath + @"\Ipv_4&6.txt"))
+            {
+                foreach (string line in text)
+                    outputFile.WriteLine(line);
+            }
         }
     }
 }

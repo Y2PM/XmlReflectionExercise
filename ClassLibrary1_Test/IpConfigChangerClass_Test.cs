@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ClassLibrary1;
+using System.Collections.Generic;
 
 namespace ClassLibrary1_Test
 {
@@ -19,14 +20,28 @@ namespace ClassLibrary1_Test
         }
 
         [TestMethod]
-        public void Test_getIPMethod_GetsIpAddress_WhenEnvoked()
+        public void Test_getIPMethod_GetsIpv4Address_WhenEnvoked()
         {
             //Arrange
             IpConfigChangerClass IpConfigChangerObject = new IpConfigChangerClass();
+            List<string> Ipv4string = null;
             //Act
-
+            Ipv4string = IpConfigChangerObject.getIp();
             //Assert
-
+            Assert.AreEqual("10.7.9.165", Ipv4string[0]);
         }
+
+        [TestMethod]
+        public void Test_getIPMethod_GetsIpv6Address_WhenEnvoked()
+        {
+            //Arrange
+            IpConfigChangerClass IpConfigChangerObject = new IpConfigChangerClass();
+            List<string> Ipv4string = null;
+            //Act
+            Ipv4string = IpConfigChangerObject.getIp();
+            //Assert
+            Assert.AreEqual("10.7.9.165", Ipv4string[1]);
+        }
+
     }
 }

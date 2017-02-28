@@ -22,18 +22,21 @@ namespace ClassLibrary1
 
         }
 
-        public string Ipv6 { get; set; }
-        public string Ipv4 { get; set; }
+        
 
-        public void getIp()
+        public List<string> getIp()
         {
-
-            //string Ipv6 = null;
-            //string Ipv4 = null;
+            string Ipv6 = null;
+            string Ipv4 = null;
 
             Ipv6 = Dns.GetHostEntry(Dns.GetHostName()).AddressList[0].ToString();
             Ipv4 = Dns.GetHostEntry(Dns.GetHostName()).AddressList[1].ToString();
 
+            List<string> IpList = new List<string>();
+            IpList.Add(Ipv4);
+            IpList.Add(Ipv6);
+
+            return IpList;
         }
     }
 }
