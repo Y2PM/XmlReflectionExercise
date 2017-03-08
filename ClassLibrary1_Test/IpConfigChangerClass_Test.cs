@@ -41,12 +41,16 @@ namespace ClassLibrary1_Test
             IpConfigChangerClass changeIPObject = new IpConfigChangerClass();
             string NewIpv4 = "0.0.0.0";
             List<string> OldIpv4string = null;
+            List<string> NewIpv4string = null;
             OldIpv4string = changeIPObject.getIp();
             //Act
-            //changeIPObject.changeSettings(NewIpv4);//Do not run until the code to put back to normal is written.
+            changeIPObject.changeSettings(NewIpv4);//Do not run until the code to put back to normal code is written. [Can use this in the command line: "netsh interface ip set address "Local Area Connection" dhcp".]
+            
+            NewIpv4string = changeIPObject.getIp();
+
 
             //Assert
-            Assert.AreNotEqual(OldIpv4string, NewIpv4);
+            Assert.AreNotEqual(OldIpv4string[0], NewIpv4string[0]);
         }
 
     }

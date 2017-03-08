@@ -47,6 +47,22 @@ namespace XmlReflectionExercise.Project
             }
             */
 
+            //Arrange
+            IpConfigChangerClass changeIPObject = new IpConfigChangerClass();
+            string NewIpv4 = "0.0.0.0";
+            //Act
+            changeIPObject.changeSettings(NewIpv4);//Do not run until the code to put back to normal code is written.
+
+            //Arrange
+            IpConfigChangerClass IpConfigChangerObject = new IpConfigChangerClass();
+            List<string> Ipv4string = null;
+            //Act
+            Ipv4string = IpConfigChangerObject.getIp();
+            //Assert
+            //
+
+            Console.WriteLine("current IP is: " + Ipv4string[0] + ", which should be: " + NewIpv4);
+            Console.ReadLine();
         }
     }
 }

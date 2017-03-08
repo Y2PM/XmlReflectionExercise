@@ -19,8 +19,8 @@ namespace ClassLibrary1
             {
                 if ((bool)item["IPEnabled"])
                 {
-                    try
-                    {
+                    //try
+                    //{
                         ManagementBaseObject setIP;
                         ManagementBaseObject newIP = item.GetMethodParameters("EnableStatic");
 
@@ -28,11 +28,11 @@ namespace ClassLibrary1
                         //newIP["SubnetMask"] = new string[] { subnet_mask };
 
                         setIP = item.InvokeMethod("EnableStatic", newIP, null);
-                    }
-                    catch (Exception)
-                    {
-                        throw;
-                    }
+                    //}
+                    //catch (Exception)
+                    //{
+                    //    throw;
+                    //}
                 }
             }
         }
