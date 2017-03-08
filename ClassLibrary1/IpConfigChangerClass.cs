@@ -28,6 +28,20 @@ namespace ClassLibrary1
                         //newIP["SubnetMask"] = new string[] { subnet_mask };
 
                         setIP = item.InvokeMethod("EnableStatic", newIP, null);
+
+                        //foreach (var item2 in setIP)//Doesn't work.
+                        //{
+
+                        //}
+
+                        //if (setIP.Equals(1) || setIP.Equals(0))//Trying to get the return value to judge whether this has worked or not. [https://msdn.microsoft.com/en-us/library/aa390383(v=vs.85).aspx]
+                        //{
+                        //    Console.WriteLine("InvokeMethod Succsess");
+                        //}
+                        //else
+                        //{
+                        //    Console.WriteLine("InvokeMethod Failure" + setIP);
+                        //}
                     //}
                     //catch (Exception)
                     //{
