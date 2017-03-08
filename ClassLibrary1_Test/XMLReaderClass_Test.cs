@@ -13,7 +13,7 @@ namespace ClassLibrary1_Test
         {
             //Arrange
             XMLReaderClass XObject = new XMLReaderClass();
-            List<string> strlist = new List<string> { };
+            List<string> strlist = null;
             //Act
             strlist = XObject.Read("C:\\Users\\joseph.bannert\\Desktop\\XmlReflectionExercise\\employee.xml", null);
             //Assert
