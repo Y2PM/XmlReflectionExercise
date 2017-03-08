@@ -22,8 +22,7 @@ namespace ClassLibrary1
                     try
                     {
                         ManagementBaseObject setIP;
-                        ManagementBaseObject newIP =
-                            item.GetMethodParameters("EnableStatic");
+                        ManagementBaseObject newIP = item.GetMethodParameters("EnableStatic");
 
                         newIP["IPAddress"] = new string[] { NewIpAddress };
                         //newIP["SubnetMask"] = new string[] { subnet_mask };
@@ -36,10 +35,9 @@ namespace ClassLibrary1
                     }
                 }
             }
-
         }
 
-        
+
 
         public List<string> getIp()
         {
