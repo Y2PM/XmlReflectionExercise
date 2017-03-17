@@ -47,6 +47,7 @@ namespace XmlReflectionExercise.Project
             }
             */
 
+            
             //Arrange
             IpConfigChangerClass changeIPObject = new IpConfigChangerClass();
             string NewIpv4 = "0.0.0.0";
@@ -63,6 +64,23 @@ namespace XmlReflectionExercise.Project
 
             Console.WriteLine("current IP is: " + Ipv4string[0] + ", which should be: " + NewIpv4);
             Console.ReadLine();
+            
+
+            /*
+            IpConfigChangerClass IpConfigChangerObject = new IpConfigChangerClass();
+            System.Net.IPAddress[] Ipv6 = null;
+            Ipv6 = Dns.GetHostEntry(Dns.GetHostName()).AddressList;
+            //Assert
+            //VB:
+            //10.0.2.15
+            //FDM:
+            //10.7.9.165
+            foreach (var item in Ipv6)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+            */
         }
     }
 }

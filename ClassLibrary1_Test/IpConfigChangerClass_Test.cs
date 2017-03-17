@@ -19,7 +19,11 @@ namespace ClassLibrary1_Test
             //Act
             Ipv4string = IpConfigChangerObject.getIp();
             //Assert
-            Assert.AreEqual("10.7.9.165", Ipv4string[0]);
+            //VB:
+            //10.0.2.15
+            //FDM:
+            //10.7.9.165
+            Assert.AreEqual("10.0.2.15", Ipv4string[0]);
         }
 
         [TestMethod]
@@ -31,7 +35,11 @@ namespace ClassLibrary1_Test
             //Act
             Ipv6string = IpConfigChangerObject.getIp();
             //Assert
-            Assert.AreEqual("fe80::94e:d392:c843:25ed%12", Ipv6string[1]);
+            //FDM:
+            //fe80::94e:d392:c843:25ed%12
+            //VB:
+            //2001:0:9d38:78cf:f3:27c0:a9fa:d685
+            Assert.AreEqual("2001:0:9d38:78cf:f3:27c0:a9fa:d685", Ipv6string[1]);
         }
 
         [TestMethod]

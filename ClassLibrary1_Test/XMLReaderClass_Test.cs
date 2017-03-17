@@ -15,7 +15,11 @@ namespace ClassLibrary1_Test
             XMLReaderClass XObject = new XMLReaderClass();
             List<string> strlist = null;
             //Act
-            strlist = XObject.Read("C:\\Users\\joseph.bannert\\Desktop\\XmlReflectionExercise\\employee.xml", null);
+            //VB:
+            //C:\Users\Joe\Source\Repos\XmlReflectionExercise\employee.xml
+            //FDM:
+            //C:\\Users\\joseph.bannert\\Desktop\\XmlReflectionExercise\\employee.xml
+            strlist = XObject.Read("C:\\Users\\Joe\\Source\\Repos\\XmlReflectionExercise\\employee.xml", null);
             //Assert
             Assert.IsNotNull(strlist[0]);
         }
@@ -27,7 +31,7 @@ namespace ClassLibrary1_Test
             XMLReaderClass XObject = new XMLReaderClass();
             List<string> strlist = new List<string> { };
             //Act
-            strlist = XObject.Read("C:\\Users\\joseph.bannert\\Desktop\\XmlReflectionExercise\\employee.xml", "hire-date");
+            strlist = XObject.Read("C:\\Users\\Joe\\Source\\Repos\\XmlReflectionExercise\\employee.xml", "hire-date");
             //Assert
             Assert.AreEqual("1900-01-01", strlist[0]);
         }
