@@ -25,6 +25,7 @@ namespace ClassLibrary1
 
                     try
                     {
+                        Console.WriteLine("Tried.");
                         ManagementBaseObject setIP;
                         ManagementBaseObject newIP = item.GetMethodParameters("EnableStatic");
 
@@ -46,6 +47,7 @@ namespace ClassLibrary1
                     #endregion
                     catch (Exception)
                     {
+                        Console.WriteLine("Caught exception");
                         throw;
                     }
                 }
