@@ -59,6 +59,7 @@ namespace ClassLibrary1
             string Ipv6 = null;
             string Ipv4 = null;
 
+            //These indexes change sometimes so this can be improved.
             Ipv6 = Dns.GetHostEntry(Dns.GetHostName()).AddressList[3].ToString();
             Ipv4 = Dns.GetHostEntry(Dns.GetHostName()).AddressList[2].ToString();
 
